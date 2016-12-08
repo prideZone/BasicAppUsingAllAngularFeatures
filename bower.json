@@ -1,0 +1,22 @@
+{
+  "name": "basic_app_using_all_angular_features",
+  "description": "Starting up version of the app.",
+  "main": "index.js",
+  "authors": [
+    "Kumar Gaurav Mishra"
+  ],
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/prideZone/BasicAppUsingAllAngularFeatures",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.9",
+    "bootstrap": "boostrap#^3.3.7"
+  }
+}
