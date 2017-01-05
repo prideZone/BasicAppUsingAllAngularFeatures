@@ -1,12 +1,56 @@
 <!DOCTYPE html>
+<style media="screen">
+    strong {
+        color: teal;
+    }
+
+</style>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Basic Student Portal</title>
-  </head>
-  <body ng-app="StudentPortal">
-    
-    <script src="../bower_components/angular/angular.min.js" type="text/javascript"></script>
-    <script src = "./app/app.js" type="text/javascript"></script>
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <title>Basic Student Portal</title>
+    </head>
+    <body ng-app="OnlinePortal" class="bg">
+        <div ng-controller="UserRegistrationController as registration">
+            <header id="header" class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="margin: 0px 0px 120px 0px; background-color: teal;"></header>
+            <div class="col-md-6" style="margin-top: 80px;">
+                <div class="form-group">
+                    <label>
+                        <strong>N</strong>ame :
+                    </label>
+                    <input type="text" ng-model="registration.user.name">
+                </div>
+                <div class="form-group">
+                    <label>
+                        <strong>E</strong>mail :
+                    </label>
+                    <input type="text" ng-model="registration.user.email">
+                </div>
+                <div class="form-group">
+                    <label>
+                        <strong>A</strong>ge : &nbsp;&nbsp;
+                    </label>
+                    <input type="text" ng-model="registration.user.age">
+                </div>
+                <div class="col-md-6">
+                  <div class="col-md-3">
+                    <button type="button" class="btn btn-primary" ng-click="registration.submit()" style="margin : 0px 0px 0px 30px;">Submit</button>
+                  </div>
+                  <div class="col-md-3">
+                     <button type="button" class="btn btn-danger" ng-click="registration.getUsers()" style="margin : 0px 0px 0px 30px;">Users</button>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="../bower_components/angular/angular.min.js" type="text/javascript"></script>
+        <script src="./app/registerService.js" type="text/javascript"></script>
+        <script src="./app/app.js" type="text/javascript"></script>
+
+
+        </script>
+        <script type="text/javascript" src="../bower_components/bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+    </body>
 </html>
